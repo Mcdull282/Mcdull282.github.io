@@ -1,0 +1,28 @@
+/* ============================================
+   麦兜的小站 · 自定义样式
+   ============================================ */
+
+/* 首页大图：按「头部区域」缩放，而不是按整个视口。
+   主题默认的 background-attachment: fixed 会按视口高度缩放，
+   导致宽扁的横幅区域被放得极大、只看到脸的一小块。 */
+#page-header.full_page,
+#page-header.post-bg,
+#page-header.not-home-page {
+  background-attachment: scroll;
+}
+
+/* 上下篇 / 相关推荐卡片
+   主题默认是「纯黑底 + 封面 40% 不透明」，配浅色封面会糊成黑块。
+   这里把底色换成深玫瑰、封面图提到 80%，让图透出来。 */
+.pagination-related {
+  background: #7C5A60;
+}
+.pagination-related .cover {
+  opacity: 0.8;
+}
+
+/* 横幅上的站点标题加一点投影，压在浅色图片上也看得清 */
+#site-title,
+#site-subtitle {
+  text-shadow: 0 2px 12px rgba(120, 70, 80, 0.45);
+}
