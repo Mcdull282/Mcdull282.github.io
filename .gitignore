@@ -1,0 +1,13 @@
+# 依赖
+node_modules/
+
+# 构建产物（由 GitHub Actions 自动生成，不需要提交）
+public/
+db.json
+
+# 主题由 npm 安装后自动映射，不需要提交
+themes/butterfly/
+
+# 系统文件
+.DS_Store
+Thumbs.db
