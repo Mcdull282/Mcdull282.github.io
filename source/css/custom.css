@@ -4,17 +4,18 @@
 
 /* 首页大图：按「头部区域」缩放，而不是按整个视口。
    主题默认的 background-attachment: fixed 会按视口高度缩放，
-   导致宽扁的横幅区域被放得极大、只看到脸的一小块。 */
+   导致宽扁的横幅区域被放得极大、只看到画面的一小块。 */
 #page-header.full_page,
 #page-header.post-bg,
 #page-header.not-home-page {
   background-attachment: scroll;
 }
 
-/* 首页大图：靠底部对齐，让图片最下面那行字幕能露出来。
-   默认是居中，上下各裁一半，底部字幕会被裁掉。 */
-#page-header.full_page {
-  background-position: center bottom;
+/* 站点标题的位置：挪到画面上方「两只手」那里。
+   用 max() 是为了兜底 —— 屏幕矮的时候至少留出 96px，
+   免得标题和顶部导航栏叠在一起。 */
+#page-header.full_page #site-info {
+  top: max(96px, 11%) !important;
 }
 
 /* 手机端换成竖图
@@ -23,7 +24,9 @@
 @media (max-width: 768px) {
   #page-header.full_page {
     background-image: url('/img/banner-mobile.jpg') !important;
-    background-position: center center;
+  }
+  #page-header.full_page #site-info {
+    top: max(96px, 16%) !important;
   }
 }
 
@@ -37,7 +40,7 @@
   opacity: 0.8;
 }
 
-/* 横幅上的站点标题加一点投影，压在浅色图片上也看得清 */
+/* 站点标题加重投影 —— 压在插画上也能看清 */
 #site-title,
 #site-subtitle {
   text-shadow:
@@ -47,16 +50,6 @@
     0 2px 6px rgba(40, 20, 30, 0.5);
 }
 
-/* 侧边栏「标签」卡片
-   主题默认会按文章数量把标签排成大小不一，颜色也是灰蓝/灰混着用。
-   这里统一成同一字号、同一种颜色，看起来整齐。 */
-#aside-content .card-tag-cloud a {
-  font-size: 1em !important;
-  color: #6E6E73 !important;
-}
-#aside-content .card-tag-cloud a:hover {
-  color: #B96E75 !important;
-}
 /* 侧边栏「标签」卡片
    主题默认会按文章数量把标签排成大小不一，颜色也是灰蓝/灰混着用。
    这里统一成同一字号、同一种颜色，看起来整齐。 */
