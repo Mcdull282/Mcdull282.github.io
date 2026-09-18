@@ -11,6 +11,22 @@
   background-attachment: scroll;
 }
 
+/* 首页大图：靠底部对齐，让图片最下面那行字幕能露出来。
+   默认是居中，上下各裁一半，底部字幕会被裁掉。 */
+#page-header.full_page {
+  background-position: center bottom;
+}
+
+/* 手机端换成竖图
+   宽屏是横的、手机屏是竖的，一张图没法同时适配两边，
+   所以窄屏时改用专门配的竖图。 */
+@media (max-width: 768px) {
+  #page-header.full_page {
+    background-image: url('/img/banner-mobile.jpg') !important;
+    background-position: center center;
+  }
+}
+
 /* 上下篇 / 相关推荐卡片
    主题默认是「纯黑底 + 封面 40% 不透明」，配浅色封面会糊成黑块。
    这里把底色换成深玫瑰、封面图提到 80%，让图透出来。 */
@@ -24,5 +40,20 @@
 /* 横幅上的站点标题加一点投影，压在浅色图片上也看得清 */
 #site-title,
 #site-subtitle {
-  text-shadow: 0 2px 12px rgba(120, 70, 80, 0.45);
+  text-shadow:
+    0 0 4px rgba(40, 20, 30, 0.9),
+    0 0 12px rgba(40, 20, 30, 0.8),
+    0 0 24px rgba(40, 20, 30, 0.6),
+    0 2px 6px rgba(40, 20, 30, 0.5);
+}
+
+/* 侧边栏「标签」卡片
+   主题默认会按文章数量把标签排成大小不一，颜色也是灰蓝/灰混着用。
+   这里统一成同一字号、同一种颜色，看起来整齐。 */
+#aside-content .card-tag-cloud a {
+  font-size: 1em !important;
+  color: #6E6E73 !important;
+}
+#aside-content .card-tag-cloud a:hover {
+  color: #B96E75 !important;
 }
