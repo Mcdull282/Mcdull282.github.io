@@ -276,7 +276,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description: 记录日常与心情
+    description: 麦兜的赛博小屋
     button:
       enable: true
       icon: fab fa-github
