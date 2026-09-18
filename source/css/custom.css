@@ -44,17 +44,17 @@
 #site-title {
   color: #46545B !important;
   text-shadow:
-    0 0 4px rgba(255, 255, 255, 0.96),
-    0 0 10px rgba(255, 255, 255, 0.82),
-    0 1px 2px rgba(255, 255, 255, 0.72);
+    0 0 3px rgba(255, 255, 255, 0.96),
+    0 0 8px rgba(255, 255, 255, 0.82),
+    0 1px 2px rgba(255, 255, 255, 0.72) !important;
 }
 
 #site-subtitle {
   color: #6A4F5A !important;
   text-shadow:
-    0 0 4px rgba(255, 255, 255, 0.96),
-    0 0 10px rgba(255, 255, 255, 0.82),
-    0 1px 2px rgba(255, 255, 255, 0.75);
+    0 0 3px rgba(255, 255, 255, 0.96),
+    0 0 8px rgba(255, 255, 255, 0.82),
+    0 1px 2px rgba(255, 255, 255, 0.75) !important;
 }
 
 /* 侧边栏「标签」卡片
